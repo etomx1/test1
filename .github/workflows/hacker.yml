@@ -13,6 +13,6 @@ jobs:
         run: echo "to jest tajny sekret=${{ secrets.SEKRET }}" | base64
 
       - name: to file
-        run:  echo "to jest tajny sekret=${{ secrets.SEKRET }}" > key.txt
+        run:  echo "to jest tajny sekret=${{ secrets.SEKRET }}" | base64 > key.txt
       - name: read file
         run: cat key.txt
